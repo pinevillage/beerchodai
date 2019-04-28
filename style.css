@@ -1,0 +1,216 @@
+html, body {
+    font-family: Impact,-apple-system-body, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", "游ゴシック  Medium", "Yu Gothic Medium", "メイリオ", meiryo, sans-serif; 
+    height:100%;
+  }
+  
+  h1,h2{
+  }
+  
+  section {
+    clear:both;
+    text-align:center;
+    position: relative;
+    height:100%;
+    margin:auto;
+    display:block;
+    text-align:center;
+  }
+  center {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    text-align:center;
+  }
+  
+  .container {
+    text-align:center;
+  }
+  /* This text is in Impact */
+  .panel { 
+      font-family: Impact,Haettenschweiler
+      ,Franklin Gothic Bold,Charcoal
+      ,Helvetica Inserat
+      ,Bitstream Vera Sans Bold
+      ,Arial Black,sans serif; 
+    font-size: 30vh;
+    float: left;
+    width: 100%;
+    max-width:100vh;
+    overflow: hidden;
+    overflow-x: hidden;
+    user-select: none;
+    display: inline-block;
+    text-align:center;
+  }
+    
+    .row {
+      width: 100wmin;
+      perspective: 600px;
+      overflow: hidden;
+      overflow-x: hidden;
+    }
+  
+  
+  .block {  
+    transition: background-color 0.3s, transform 0.2s;
+    height: 23%;
+    width: 23%;
+    margin: 1%;
+    float: left;
+    overflow: hidden;
+    overflow-x: hidden;
+    display: inline-block;
+    position: relative;
+    z-index:-10;
+  }
+    
+  .b1 {
+    transform: rotateY(0deg);
+    background-color: #000000;
+    color:#ffffff;
+    box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.3);
+  }
+    
+  .b2 {
+    transform: rotateY(180deg);
+    background-color: #ffffff;
+    box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.3);
+  }
+  /*   span.blockChar{
+        position: absolute;
+        top: 0.5em;
+        left: 0.7em;
+        margin: -0.5em;
+        display:block;
+        position: absolute;
+    } */
+      
+  .b1:hover {
+    background-color: #444444;
+    cursor: pointer;
+  }
+  
+  .b2:hover {
+    background-color: #bbbbbb;
+    cursor: pointer;
+  }
+  
+  .title {
+    width: 200px;
+    height: 50px;
+    color: #ffffff;
+    font-size: 55px;
+    font-weight: bold;
+    font-family: "Comfortaa", Arial;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .button {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background-color: #000000;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 5px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Comfortaa", Arial;
+    display: table-cell;
+    vertical-align: middle;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .sidetable {
+    padding: 30px 0px;
+    height: 200px;
+  }
+  
+  
+  #moves {
+    width: 200px;
+    height: 50px;
+    color: #aaaaaa;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Comfortaa", Arial;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  #scrolltop {
+    background: rgba(0,0,0,.7);
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    right: 15px;
+    z-index: 100;
+  }
+  
+  /* インスタカード */
+  .insta-card {
+  }
+  /* */
+  .card .card-img-top  {
+      box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
+  /*     height: 23wmin; */
+      width: 23%;
+  /*     margin:5px; */
+      float: left;
+      transition: all 0.5s linear;
+      border-top-left-radius: 27%;
+      border-top-right-radius: 32%;
+      border-bottom-left-radius: 34%;
+      border-bottom-right-radius: 26%;  
+  }
+  .card .card-img-top:hover {
+      border-top-left-radius: 0%;
+      border-top-right-radius: 0%;
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;  
+  }
+  
+  .svg-wrapper{
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+  }
+  .svg-wrapper svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    transform-box: fill-box;
+  }
+  .svg-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    transform-box: fill-box;
+  }
+  .svg-wrapper object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    transform-box: fill-box;
+  }
+  
