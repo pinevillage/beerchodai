@@ -125,12 +125,12 @@ $(function() {
                 `;
                 $(".insta-card").append(this.html);
             }
-                this.html = `
-                <div class="card">
-            <iframe src="https://www.youtube.com/embed/J4P4ln781D0?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=J4P4ln781D0" frameborder="0" allowfullscreen></iframe>
-                </div>
-                `;
-                $(".insta-card").append(this.html);
+            //     this.html = `
+            //     <div class="card">
+            // <iframe src="https://www.youtube.com/embed/J4P4ln781D0?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=J4P4ln781D0" frameborder="0" allowfullscreen></iframe>
+            //     </div>
+            //     `;
+            //     $(".insta-card").append(this.html);
     });
 });
 

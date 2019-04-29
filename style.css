@@ -4,6 +4,7 @@ html, body {
   }
   
   h1,h2{
+    margin-top:10px;
   }
   
   section {
@@ -42,8 +43,8 @@ html, body {
     font-size: 30vh;
     margin: 0 auto;
     display: block;
-    width: 95%;
-    max-width:95vh;
+    width: 100%;
+    max-width:100vh;
     overflow: hidden;
     overflow-x: hidden;
     user-select: none;
@@ -221,3 +222,26 @@ html, body {
     transform-box: fill-box;
   }
   
+.project-list_title {
+  text-align: center;
+  position: relative;
+}
+section::before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 70px;
+  margin: 25px auto 0;
+  background-color: #D1D1D1;
+}
+
+section::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 70px;
+  margin: 25px auto 0;
+  background-color: #D1D1D1;
+}
