@@ -169,8 +169,10 @@
 
     // Some default config values.
     var defaults = {
-        width: 1024,
-        height: 768,
+        // width: 1024,
+        // height: 768,
+        width: 375,
+        height: 667,
         maxScale: 1,
         minScale: 0,
 
