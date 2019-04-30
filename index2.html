@@ -7,11 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="content-language" content="ja">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<script src="./main.js"></script>
-<link href="./style.css" rel="stylesheet">
-<!-- <link href="impress.js/css/impress-demo.css" rel="stylesheet" /> -->
-<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <script src="./main.js"></script>
+    <link href="./style.css" rel="stylesheet">
+    <!-- <link href="impress.js/css/impress-demo.css" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <script>
+        /* ピッチインピッチアウトによる拡大縮小を禁止 */
+        document.documentElement.addEventListener('touchstart', function (e) {
+            if (e.touches.length >= 2) { e.preventDefault(); }
+        }, { passive: false });
+        /* ダブルタップによる拡大を禁止 */
+        var t = 0;
+        document.documentElement.addEventListener('touchend', function (e) {
+            var now = new Date().getTime();
+            if ((now - t) < 350) {
+                e.preventDefault();
+            }
+            t = now;
+        }, false);
+    </script>
+    <style>
+        body,
+        input,
+        textarea,
+        select {
+            /* 入力欄にフォーカスが当たっても拡大しない */
+            font-size: 17px;
+        }
+    </style>
 </head>
 
 <body>
@@ -187,7 +210,8 @@
             </section>
         </div>
 
-        <div id="slide9" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <div id="slide9" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10"
+            data-scale="2">
             <section>
                 <h2>
                     最新情報・ブログ的イメージ
