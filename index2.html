@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-language" content="ja">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<script src="./main.js"></script>
+<link href="./style.css" rel="stylesheet">
+<!-- <link href="impress.js/css/impress-demo.css" rel="stylesheet" /> -->
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+
+<body>
+    <div id="impress">
+        <div id="slide1" class="step" data-x="0" data-y="0">
+            <!-- <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q> -->
+            <!-- <iframe src="index.html" frameborder="0"></iframe> -->
+            <center>
+                <div class="panel">
+                    <div class="row">
+                        <div onclick="toggle(0,0);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-1.svg" alt="B">
+                            </div>
+                        </div>
+                        <div onclick="toggle(1,0);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-2.svg" alt="E">
+
+                                <!--                   <object type="image/svg"  data="https://dl.dropbox.com/s/feq2gaag3vxsv3z/brco-2.svg"></object> -->
+                                <!--                   <svg class="icon"><use xlink:href="#svg7544"/></svg> -->
+                            </div>
+                        </div>
+                        <div onclick="toggle(2,0);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-3.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(3,0);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-4.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div onclick="toggle(0,1);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-5.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(1,1);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-6.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(2,1);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-7.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(3,1);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-8.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div onclick="toggle(0,2);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-9.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(1,2);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-10.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(2,2);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-11.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(3,2);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-12.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div onclick="toggle(0,3);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-13.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(1,3);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-14.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(2,3);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-15.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                        <div onclick="toggle(3,3);" class="block b1">
+                            <a href="#anchor"></a>
+                            <div class="svg-wrapper">
+                                <img src="asset/img/brco-16.svg?dl=0" alt="E">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <div id="slide2" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+            <center>
+                <span class="try">then you should try</span>
+                <h1>impress.js<sup>*</sup></h1>
+                <span class="footnote"><sup>*</sup> no rhyme intended</span>
+            </center>
+        </div>
+        <div id="slide3" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+            <section>
+                <h2>
+                    Beer chodai officeについて
+                </h2>
+            </section>
+        </div>
+
+        <div id="slide4" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+            <section>
+                <h2>
+                    増永進之介、yoco tune プロフィール
+                </h2>
+            </section>
+        </div>
+
+        <div id="slide5" class="step" data-x="3500" data-y="-850" data-z="0" data-rotate="270" data-scale="6">
+            <section>
+                <h2 id="anchor">
+                    業務内容、料金表
+                </h2>
+            </section>
+        </div>
+
+        <div id="slide6" class="step" data-x="6700" data-y="-300" data-scale="6">
+            <section>
+                <h2>
+                    グッズページ
+                </h2>
+            </section>
+        </div>
+
+        <div id="slide7" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+            <section>
+                <h2>
+                    会社概要
+                </h2>
+            </section>
+        </div>
+
+        <div id="slide8" class="step" data-x="6000" data-y="4000" data-scale="2">
+            <section>
+                <h2>
+                    ｔｕｎｅ投稿ページ（インスタ併用）
+                </h2>
+                <div class="insta-card"></div>
+            </section>
+        </div>
+
+        <div id="slide9" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+            <section>
+                <h2>
+                    最新情報・ブログ的イメージ
+                </h2>
+            </section>
+        </div>
+
+        <div id="slide10" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="10">
+            <section>
+                <h2>
+                    イベント情報
+                </h2>
+            </section>
+        </div>
+
+        <div id="slide11" class="step" data-x="-3500" data-y="-2100" data-rotate="-180" data-scale="-6">
+            <section>
+                <h2>
+                    過去の仕事紹介
+                </h2>
+            </section>
+        </div>
+
+        <div id="slide12" class="step" data-x="-2825" data-y="-2325" data-z="3000" data-rotate="-300" data-scale="-1">
+            <section>
+                <h2>
+                    問い合わせ先
+                </h2>
+            </section>
+        </div>
+    </div>
+    <script src="impress.js/js/impress.js"></script>
+    <script>impress().init();</script>
+
+</body>
+
+</html>
