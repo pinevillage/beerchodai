@@ -248,7 +248,7 @@ section::after {
 /* to impress */
 .step {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 2s;
   position: relative;
   /* width: 900px; */
   width: 100vw;
@@ -271,5 +271,6 @@ section::after {
   overflow: scroll;
 }
 .step.active {
-  opacity: 1
+  opacity: 1;
+  transition: opacity 5s;
 }

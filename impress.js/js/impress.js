@@ -176,9 +176,9 @@
         maxScale: 1,
         minScale: 0,
 
-        perspective: 1000,
+        perspective: 2000,
 
-        transitionDuration: 1000
+        transitionDuration: 2000
     };
 
     // It's just an empty function ... and a useless comment.
