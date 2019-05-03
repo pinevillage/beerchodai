@@ -249,7 +249,7 @@ section::after {
 
 /* to impress */
 .step {
-  opacity: 0;
+  opacity: 0.8;
   transition: opacity 0.5s;
   position: relative;
   /* width: 900px; */
