@@ -1,6 +1,8 @@
 html, body {
     font-family: Impact,-apple-system-body, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", "游ゴシック  Medium", "Yu Gothic Medium", "メイリオ", meiryo, sans-serif; 
     height:100%;
+    overflow-x : hidden;
+    -webkit-overflow-scrolling: touch;
   }
   
   h1,h2{
@@ -248,7 +250,7 @@ section::after {
 /* to impress */
 .step {
   opacity: 0;
-  transition: opacity 2s;
+  transition: opacity 0.5s;
   position: relative;
   /* width: 900px; */
   width: 100vw;
@@ -272,5 +274,8 @@ section::after {
 }
 .step.active {
   opacity: 1;
-  transition: opacity 5s;
+  transition: opacity 0.5s;
+}
+#impress {
+  /* overflow: hidden;  */
 }
