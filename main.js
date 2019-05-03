@@ -94,7 +94,7 @@ $(function($) {
     var position = target.offset().top;
     $('body,html').animate(
       {
-        scrollTop:position
+        // scrollTop: position
       },speed,'swing');
     return false;
   });

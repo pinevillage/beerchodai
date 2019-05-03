@@ -271,6 +271,7 @@ section::after {
   font-family: 'PT Serif', georgia, serif;
   -webkit-overflow-scrolling: scroll;
   overflow: scroll;
+  background-color: #444444;
 }
 .step.active {
   opacity: 1;
