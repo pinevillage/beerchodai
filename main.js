@@ -142,3 +142,11 @@ $.ajax({
     var svg = $(data).find('svg');
     $('.aaa').prepend(svg);
   });
+
+// prevent scrolling on the whole page
+// this is not meteorish; TODO: translate to meteor-centric code
+document.ontouchmove = function(e) {e.preventDefault()};
+
+// prevent scrolling on specific elements
+// this is not meteorish; TODO: translate to meteor-centric code
+scrollableDiv.ontouchmove = function(e) {e.stopPropagation()};
