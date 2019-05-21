@@ -247,9 +247,9 @@ section::after {
   background-color: #D1D1D1;
 }
 
-/* to impress */
+/* start impress area*/
 .step {
-  opacity: 0.8;
+  opacity: 0;
   transition: opacity 0.5s;
   position: relative;
   /* width: 900px; */
@@ -271,12 +271,15 @@ section::after {
   font-family: 'PT Serif', georgia, serif;
   -webkit-overflow-scrolling: scroll;
   overflow: scroll;
-  background-color: #444444;
+  /* background-color: #444444; */
+  pointer-events: none;
 }
 .step.active {
   opacity: 1;
   transition: opacity 0.5s;
+  pointer-events: auto;
 }
 #impress {
   /* overflow: hidden;  */
 }
+/* end impress area*/

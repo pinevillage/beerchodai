@@ -169,16 +169,14 @@
 
     // Some default config values.
     var defaults = {
-        // width: 1024,
-        // height: 768,
-        width: 375,
-        height: 667,
+        width: 1024,
+        height: 768,
         maxScale: 1,
         minScale: 0,
 
-        perspective: 2000,
+        perspective: 1000,
 
-        transitionDuration: 2000
+        transitionDuration: 1000
     };
 
     // It's just an empty function ... and a useless comment.
@@ -3341,33 +3339,33 @@
         }, false );
 
         // Delegated handler for clicking on step elements
-        gc.addEventListener( document, "click", function( event ) {
-            var target = event.target;
-            try {
+        // gc.addEventListener( document, "click", function( event ) {
+        //     var target = event.target;
+        //     try {
 
-                // Find closest step element that is not active
-                while ( !( target.classList.contains( "step" ) &&
-                        !target.classList.contains( "active" ) ) &&
-                        ( target !== document.documentElement ) ) {
-                    target = target.parentNode;
-                }
+        //         // Find closest step element that is not active
+        //         while ( !( target.classList.contains( "step" ) &&
+        //                 !target.classList.contains( "active" ) ) &&
+        //                 ( target !== document.documentElement ) ) {
+        //             target = target.parentNode;
+        //         }
 
-                if ( api.goto( target ) ) {
-                    event.preventDefault();
-                }
-            }
-            catch ( err ) {
+        //         if ( api.goto( target ) ) {
+        //             event.preventDefault();
+        //         }
+        //     }
+        //     catch ( err ) {
 
-                // For example, when clicking on the button to launch speaker console, the button
-                // is immediately deleted from the DOM. In this case target is a DOM element when
-                // we get it, but turns out to be null if you try to actually do anything with it.
-                if ( err instanceof TypeError &&
-                     err.message === "target is null" ) {
-                    return;
-                }
-                throw err;
-            }
-        }, false );
+        //         // For example, when clicking on the button to launch speaker console, the button
+        //         // is immediately deleted from the DOM. In this case target is a DOM element when
+        //         // we get it, but turns out to be null if you try to actually do anything with it.
+        //         if ( err instanceof TypeError &&
+        //              err.message === "target is null" ) {
+        //             return;
+        //         }
+        //         throw err;
+        //     }
+        // }, false );
 
         // Add a line to the help popup
         util.triggerEvent( document, "impress:help:add", { command: "Left &amp; Right",

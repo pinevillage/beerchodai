@@ -85,20 +85,20 @@ $(function(){
   });
 });
 
-$(function($) {
-  $('.block').css('cursor','pointer');
-  $('.block').on('click',function () {
-    var speed = 700;
-    var href= $(this).find('a').attr('href');
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top;
-    $('body,html').animate(
-      {
-        // scrollTop: position
-      },speed,'swing');
-    return false;
-  });
-});
+// $(function($) {
+//   $('.block').css('cursor','pointer');
+//   $('.block').on('click',function () {
+//     var speed = 700;
+//     var href= $(this).find('a').attr('href');
+//     var target = $(href == "#" || href == "" ? 'html' : href);
+//     var position = target.offset().top;
+//     $('body,html').animate(
+//       {
+//         scrollTop: position
+//       },speed,'swing');
+//     return false;
+//   });
+// });
 
 
 $(function() {
