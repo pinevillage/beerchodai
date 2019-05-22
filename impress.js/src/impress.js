@@ -152,7 +152,7 @@
     if ( !impressSupported ) {
 
         // We can't be sure that `classList` is supported
-        body.className += " impress-not-supported ";
+        // body.className += " impress-not-supported ";
     }
 
     // GLOBALS AND DEFAULTS
@@ -647,82 +647,82 @@
         // Note: For now, this function is made available to be used by the swipe plugin (which
         // is the UI counterpart to this). It is a semi-internal API and intentionally not
         // documented in DOCUMENTATION.md.
-        var swipe = function( pct ) {
-            if ( Math.abs( pct ) > 1 ) {
-                return;
-            }
+        // var swipe = function( pct ) {
+        //     if ( Math.abs( pct ) > 1 ) {
+        //         return;
+        //     }
 
-            // Prepare & execute the preStepLeave event
-            var event = { target: activeStep, detail: {} };
-            event.detail.swipe = pct;
+        //     // Prepare & execute the preStepLeave event
+        //     var event = { target: activeStep, detail: {} };
+        //     event.detail.swipe = pct;
 
-            // Will be ignored within swipe animation, but just in case a plugin wants to read this,
-            // humor them
-            event.detail.transitionDuration = config.transitionDuration;
-            var idx; // Needed by jshint
-            if ( pct < 0 ) {
-                idx = steps.indexOf( activeStep ) + 1;
-                event.detail.next = idx < steps.length ? steps[ idx ] : steps[ 0 ];
-                event.detail.reason = "next";
-            } else if ( pct > 0 ) {
-                idx = steps.indexOf( activeStep ) - 1;
-                event.detail.next = idx >= 0 ? steps[ idx ] : steps[ steps.length - 1 ];
-                event.detail.reason = "prev";
-            } else {
+        //     // Will be ignored within swipe animation, but just in case a plugin wants to read this,
+        //     // humor them
+        //     event.detail.transitionDuration = config.transitionDuration;
+        //     var idx; // Needed by jshint
+        //     if ( pct < 0 ) {
+        //         idx = steps.indexOf( activeStep ) + 1;
+        //         event.detail.next = idx < steps.length ? steps[ idx ] : steps[ 0 ];
+        //         event.detail.reason = "next";
+        //     } else if ( pct > 0 ) {
+        //         idx = steps.indexOf( activeStep ) - 1;
+        //         event.detail.next = idx >= 0 ? steps[ idx ] : steps[ steps.length - 1 ];
+        //         event.detail.reason = "prev";
+        //     } else {
 
-                // No move
-                return;
-            }
-            if ( execPreStepLeavePlugins( event ) === false ) {
+        //         // No move
+        //         return;
+        //     }
+        //     if ( execPreStepLeavePlugins( event ) === false ) {
 
-                // If a preStepLeave plugin wants to abort the transition, don't animate a swipe
-                // For stop, this is probably ok. For substep, the plugin it self might want to do
-                // some animation, but that's not the current implementation.
-                return false;
-            }
-            var nextElement = event.detail.next;
+        //         // If a preStepLeave plugin wants to abort the transition, don't animate a swipe
+        //         // For stop, this is probably ok. For substep, the plugin it self might want to do
+        //         // some animation, but that's not the current implementation.
+        //         return false;
+        //     }
+        //     var nextElement = event.detail.next;
 
-            var nextStep = stepsData[ "impress-" + nextElement.id ];
+        //     var nextStep = stepsData[ "impress-" + nextElement.id ];
 
-            // If the same step is re-selected, force computing window scaling,
-            var nextScale = nextStep.scale * windowScale;
-            var k = Math.abs( pct );
+        //     // If the same step is re-selected, force computing window scaling,
+        //     var nextScale = nextStep.scale * windowScale;
+        //     var k = Math.abs( pct );
 
-            var interpolatedStep = {
-                translate: {
-                    x: interpolate( currentState.translate.x, -nextStep.translate.x, k ),
-                    y: interpolate( currentState.translate.y, -nextStep.translate.y, k ),
-                    z: interpolate( currentState.translate.z, -nextStep.translate.z, k )
-                },
-                rotate: {
-                    x: interpolate( currentState.rotate.x, -nextStep.rotate.x, k ),
-                    y: interpolate( currentState.rotate.y, -nextStep.rotate.y, k ),
-                    z: interpolate( currentState.rotate.z, -nextStep.rotate.z, k ),
+        //     var interpolatedStep = {
+        //         translate: {
+        //             x: interpolate( currentState.translate.x, -nextStep.translate.x, k ),
+        //             y: interpolate( currentState.translate.y, -nextStep.translate.y, k ),
+        //             z: interpolate( currentState.translate.z, -nextStep.translate.z, k )
+        //         },
+        //         rotate: {
+        //             x: interpolate( currentState.rotate.x, -nextStep.rotate.x, k ),
+        //             y: interpolate( currentState.rotate.y, -nextStep.rotate.y, k ),
+        //             z: interpolate( currentState.rotate.z, -nextStep.rotate.z, k ),
 
-                    // Unfortunately there's a discontinuity if rotation order changes. Nothing I
-                    // can do about it?
-                    order: k < 0.7 ? currentState.rotate.order : nextStep.rotate.order
-                },
-                scale: interpolate( currentState.scale, nextScale, k )
-            };
+        //             // Unfortunately there's a discontinuity if rotation order changes. Nothing I
+        //             // can do about it?
+        //             order: k < 0.7 ? currentState.rotate.order : nextStep.rotate.order
+        //         },
+        //         scale: interpolate( currentState.scale, nextScale, k )
+        //     };
 
-            css( root, {
+        //     css( root, {
 
-                // To keep the perspective look similar for different scales
-                // we need to 'scale' the perspective, too
-                perspective: config.perspective / interpolatedStep.scale + "px",
-                transform: scale( interpolatedStep.scale ),
-                transitionDuration: "0ms",
-                transitionDelay: "0ms"
-            } );
+        //         // To keep the perspective look similar for different scales
+        //         // we need to 'scale' the perspective, too
+        //         perspective: config.perspective / interpolatedStep.scale + "px",
+        //         transform: scale( interpolatedStep.scale ),
+        //         transitionDuration: "0ms",
+        //         transitionDelay: "0ms"
+        //     } );
 
-            css( canvas, {
-                transform: rotate( interpolatedStep.rotate, true ) +
-                           translate( interpolatedStep.translate ),
-                transitionDuration: "0ms",
-                transitionDelay: "0ms"
-            } );
-        };
+        //     css( canvas, {
+        //         transform: rotate( interpolatedStep.rotate, true ) +
+        //                    translate( interpolatedStep.translate ),
+        //         transitionDuration: "0ms",
+        //         transitionDelay: "0ms"
+        //     } );
+        // };
 
         // Teardown impress
         // Resets the DOM to the state it was before impress().init() was called.
