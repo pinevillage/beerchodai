@@ -14,14 +14,14 @@
 </head>
 
 <body>
-        <div id="impress">
-            <div id="slide1" class="step" data-x="0" data-y="0">
+    <div id="impress">
+        <div id="slide1" class="step" data-x="0" data-y="0">
             <!-- <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q> -->
             <!-- <iframe src="index.html" frameborder="0"></iframe> -->
             <center>
                 <div class="panel">
                     <div class="row">
-                            <div onclick="toggle(0,0);" class="block b1">
+                        <div onclick="toggle(0,0);" class="block b1">
                             <a href="#/slide3"></a>
                             <div class="svg-wrapper">
                                 <img src="asset/img/brco-1.svg" alt="B">
@@ -137,11 +137,14 @@
         <div id="slide3" class="step" data-x="2000" data-y="1000" data-rotate="180" data-scale="6">
             <section>
                 <h2>
-                    Beer chodai officeについて
+                    Beer Chodai Officeについて
                 </h2>
                 <span class="try">then you should try</span>
-                <h1>impress.js<sup>*</sup></h1>
+                <h1>Art Music and Beer<sup>*</sup></h1>
                 <span class="footnote"><sup>*</sup> no rhyme intended</span>
+                <p>B.C は アート作品の販売、ウォールアート、
+                    各種イベント企画、運営、飲食営業、コンサルティングを行っています。
+                </p>
             </section>
         </div>
 
@@ -150,7 +153,9 @@
                 <h2>
                     増永進之介、yoco tune プロフィール
                 </h2>
-                <img src="asset/img/profile.svg" alt="profile">
+                <div>
+                    <img src="asset/img/profile.svg" alt="profile">
+                </div>
             </section>
         </div>
 
@@ -222,6 +227,28 @@
     </div>
     <script src="impress.js/js/impress.js"></script>
     <script>impress().init();</script>
+    <script>
+        var paragraph = document.querySelector('p');
+        paragraph.scrollTop = 1;
+
+        window.addEventListener('touchmove', function (event) {
+            if (event.target === paragraph && paragraph.scrollTop !== 0 && paragraph.scrollTop + paragraph.clientHeight !== paragraph.scrollHeight) {
+                event.stopPropagation();
+            }
+            else {
+                event.preventDefault();
+            }
+        });
+
+        paragraph.addEventListener('scroll', function (event) {
+            if (paragraph.scrollTop === 0) {
+                paragraph.scrollTop = 1;
+            }
+            else if (paragraph.scrollTop + paragraph.clientHeight === paragraph.scrollHeight) {
+                paragraph.scrollTop = paragraph.scrollTop - 1;
+            }
+        });
+    </script>
 
 </body>
 

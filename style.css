@@ -31,7 +31,12 @@ html, body {
     display:table-cell;
     vertical-align: middle;
   }
-  
+  img{
+    max-width:100%;
+  }
+  p{
+    padding:10%;
+  }
   .container {
     text-align:center;
   }
