@@ -1,0 +1,14 @@
+.pblock{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+body {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}

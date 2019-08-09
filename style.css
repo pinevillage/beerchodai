@@ -288,3 +288,7 @@ section::after {
   /* overflow: hidden;  */
 }
 /* end impress area*/
+
+#impress-toolbar{
+  z-index: -100;
+}
