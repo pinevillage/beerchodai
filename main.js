@@ -135,14 +135,6 @@ $(function() {
 });
 
 
-// $.ajax({
-//     type: 'get',
-//     url: 'https://dl.dropbox.com/s/feq2gaag3vxsv3z/brco-2.svg'//ここにパスを入れる（環境に合わせて変更）
-//   }).done(function(data) {
-//     var svg = $(data).find('svg');
-//     $('.aaa').prepend(svg);
-//   });
-
 // prevent scrolling on the whole page
 // this is not meteorish; TODO: translate to meteor-centric code
 document.ontouchmove = function(e) {e.preventDefault()};
