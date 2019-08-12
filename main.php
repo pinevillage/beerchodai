@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  header("Content-type: text/html; charset=utf-8");
+  //クリックジャッキング対策
+  header('X-FRAME-OPTIONS: SAMEORIGIN');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
 
@@ -103,33 +109,33 @@
     <!-- 1 最新情報 -->
     <section>
       <h2 class="title">
-        最新情報
+        news
       </h2>
     </section>
     <!-- 2 イベント情報 -->
     <section>
       <h2 class="title">
-        イベント情報
+        events
       </h2>
       <div id="calendar"></div>
     </section>
     <!-- 3 ギャラリー -->
     <section>
       <h2 class="title">
-        Gallery
+        gallery
       </h2>
       <div class="insta-card"></div>
     </section>
     <!-- 4 過去の仕事情報 -->
     <section>
       <h2 class="title">
-        過去の仕事紹介
+        works
       </h2>
     </section>
     <!-- 5 Beer Chodai officeについて -->
     <section>
       <h2 class="title">
-        Beer Chodai officeについて
+        about  Beer Chodai office 
       </h2>
       <div>
         <p class="pblock">
@@ -146,15 +152,15 @@
     <!-- 6 プロフィール -->
     <section>
       <h2 class="title">
-        増永進之介、yoco tune プロフィール
+        profile
       </h2>
       <img src="asset/img/profile.svg" alt="profile">
     </section>
     <!-- 7 業務内容 -->
-    <div>
+    <section>
       <div>
         <h2 class="title" id="anchor">
-          業務内容、料金表
+          prices
         </h2>
       </div>
       <div>
@@ -191,12 +197,12 @@
           出店依頼料¥20,000〜
         </p>
       </div>
-    </div>
+    </section>
     <!-- 8 goods -->
     <section>
       <div>
         <h2 class="title">
-          グッズページ
+          goods
         </h2>
       </div>
       <div class="pblock">
@@ -213,7 +219,7 @@
     <!-- 9 会社概要 -->
     <section>
       <h2 class="title">
-        会社概要
+        company
       </h2>
       <div class="pblock">
         <ul>
@@ -227,8 +233,18 @@
     <!-- 10 問い合わせ先 -->
     <section>
       <h2 class="title">
-        問い合わせ先
+        contact
       </h2>
+      <p> 全ての項目が必須です。</p>
+      <form action="mail_check.php" method="post">
+        <ul>
+          <li><p>名前：<input type="text" name="name"></p></li>
+          <li><p>メールアドレス：<input type="text" name="mail" size="50"></p></li>
+          <li><p><textarea name="comment" rows="4" cols="40">コメントをどうぞ</textarea></p></li>
+        </ul>
+        <input type="hidden" name="token" value="<?=sha1(session_id())?>">
+        <input class="button" type="submit" value="確認する">
+      </form>
     </section>
   </div>
 </body>

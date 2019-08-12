@@ -5,8 +5,9 @@ body {
   padding-bottom: 15vh;
 }
 
-section {
-  margin-top: 50px;
+ul {
+  margin: 0px;
+  padding: 0px;
 }
 
 .pblock {
@@ -19,6 +20,8 @@ section {
 li {
   list-style-type: none;
 }
+
+/* カレンダーデザイン　ここから */
 
 #calendar {
   width: 98%;
@@ -36,9 +39,15 @@ li {
   word-wrap: break-word!important;
 }
 
+/***** max-width: 480px *****/
+
 @media screen and (max-width: 480px) {
+  .pblock {
+    width: 90%;
+    padding: inherit;
+  }
   .fc-event {
-    font-size: 18px;
+    font-size: 12px;
     /*--event title font size--*/
     margin-bottom: 4px;
     /*--　帯の隙間 event clearance--*/
@@ -64,7 +73,12 @@ li {
     background-color: #e9e9e9;
     /*--背景色--*/
   }
+  .fc-button {
+    font-size: 12px !important;
+  }
 }
+
+/* カレンダーデザイン　ここまで */
 
 .top {
   height: 100%;
@@ -247,7 +261,7 @@ button.active .clos {
 }
 
 .nav-item img {
-  height: 10vh ;
+  height: 10vh;
   float: left;
   margin-left: 20px;
 }
@@ -264,3 +278,8 @@ button.active .clos {
 }
 
 /**** MENU 関連 ここまで ***/
+
+p input,textarea {
+  background: none;
+  border: solid 1px #333;
+}
