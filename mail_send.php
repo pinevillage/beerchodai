@@ -48,8 +48,10 @@ if (mb_send_mail($mailTo, $subject, $body, $header, '-f'. $returnMail)) {
  	//セッションを破棄する
  	session_destroy();
  	
- 	echo "メールが送信されました。";
- 	
+	 echo "メールが送信されました。";
+	 ?>
+	 <input type="button" value="戻る" onClick="location.href='./main.php'">
+<?php
  } else {
 	echo "メールの送信に失敗しました。";
 }
